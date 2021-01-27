@@ -32,8 +32,33 @@ namespace GameProject.Concrete
             {
                 throw new Exception("Not a valid person!");
             }
+        }
+        public void Delete(Player player)
+        {
+            if (_playerCheckService.CheckIfRealPerson(player))
+            {
+                base.Delete(player);
+            }
 
+            else
+            {
+                throw new Exception("Not a valid person!");
+            }
 
         }
+        public void Update(Player player)
+        {
+            if (_playerCheckService.CheckIfRealPerson(player))
+            {
+                base.Update(player);
+            }
+
+            else
+            {
+                throw new Exception("Not a valid person!");
+            }
+            
+        }
+
     }
 }

@@ -17,5 +17,15 @@ namespace GameProject.Concrete
         {
             Console.WriteLine("The {0} game has been purchased.",game.Name);
         }
+
+        public void Delete(Player player)
+        {
+            Console.WriteLine("Deleted Player : {0}", player.NickName);
+        }
+
+        public void Update(Player player)
+        {
+            Console.WriteLine("Updated Player : {0}", player.NickName);
+        }
     }
 }
